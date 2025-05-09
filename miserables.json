@@ -1,9 +1,9 @@
 {
   "nodes": [
-    {"id": "Myriel", "group": 1, "description": "<img src='https://cdn.rcsb.org/images/structures/9euf_assembly-1.jpeg' />"},
-    {"id": "Napoleon", "group": 1},
-    {"id": "Mlle.Baptistine", "group": 1},
-    {"id": "Mme.Magloire", "group": 1},
+    {"id": "Myriel", "group": 1, "score": 1},
+    {"id": "Napoleon", "group": 1, "score": 0.5},
+    {"id": "Mlle.Baptistine", "group": 1, "score": 0.8},
+    {"id": "Mme.Magloire", "group": 1, "score": 1},
     {"id": "CountessdeLo", "group": 1},
     {"id": "Geborand", "group": 1},
     {"id": "Champtercier", "group": 1},

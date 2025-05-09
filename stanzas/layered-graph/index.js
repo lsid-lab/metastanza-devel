@@ -112,6 +112,13 @@ export default class ForceGraph extends Stanza {
       scale: this.params["node-size-scale"] || "linear",
     };
 
+    const nodeAlphaParams = {
+      dataKey: this.params["node-alpha-key"] || "",
+      minAlpha: setFallbackNumVal(this.params["node-alpha-min"], 0),
+      maxAlpha: this.params["node-alpha-max"],
+      scale: this.params["node-alpha-scale"] || "linear",
+    };
+
     const nodeColorParams = {
       dataKey: this.params["node-color-key"] || "",
     };
@@ -151,6 +158,7 @@ export default class ForceGraph extends Stanza {
       color,
       highlightAdjEdges,
       nodeSizeParams,
+      nodeAlphaParams,
       nodesSortParams,
       groupsSortParams,
       nodeColorParams,
@@ -340,6 +348,7 @@ export default class ForceGraph extends Stanza {
           .attr("cx", 0)
           .attr("cy", 0)
           .attr("r", (d) => d[symbols.nodeSizeSym])
+          .style("opacity", (d) => d[symbols.nodeAlphaSym])
           .style("fill", (d) => d[symbols.nodeColorSym]);
 
         nodeGroup
@@ -348,6 +357,7 @@ export default class ForceGraph extends Stanza {
           .text((d) => d[symbols.nodeLabelSym] || "")
           .attr("alignment-baseline", "hanging")
           .attr("text-anchor", "middle")
+          .style("opacity", (d) => d[symbols.nodeAlphaSym])
           .attr("y", (d) => d[symbols.nodeSizeSym] + 2);
       }
 

@@ -77,6 +77,31 @@
       "stanza:description": "Node size scale"
     },
     {
+      "stanza:key": "node-alpha-key",
+      "stanza:type": "string",
+      "stanza:example": "group",
+      "stanza:description": "Set alpha on the node based on data key"
+    },
+    {
+      "stanza:key": "node-alpha-min",
+      "stanza:type": "number",
+      "stanza:example": 0,
+      "stanza:description": "Minimum node alpha"
+    },
+    {
+      "stanza:key": "node-alpha-max",
+      "stanza:type": "number",
+      "stanza:example": 1.0,
+      "stanza:description": "Maximum node alpha"
+    },
+    {
+      "stanza:key": "node-alpha-scale",
+      "stanza:type": "single-choice",
+      "stanza:choice": ["linear", "sqrt", "log10"],
+      "stanza:example": "sqrt",
+      "stanza:description": "Node alpha scale"
+    },
+    {
       "stanza:key": "node-color-key",
       "stanza:type": "string",
       "stanza:example": "group",
@@ -117,7 +142,7 @@
       "stanza:key": "tooltips-html",
       "stanza:type": "string",
       "stanza:example": "true",
-      "stanza:description": "Node tooltips html key. If empty, no tooltips will be shown"
+      "stanza:description": "Accept HTML as tooltip data, or not."
     },
     {
       "stanza:key": "togostanza-custom_css_url",
