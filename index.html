@@ -14,7 +14,7 @@
 ></togostanza-pagination-table>
 
 <togostanza-layered-graph
-  data-url="http://127.0.0.1:3000/miserables.json"
+  data-url="http://127.0.0.1:3000/sample.json"
   data-type="json"
   node-label_key="id"
   nodes-sort-key="id"
@@ -23,11 +23,15 @@
   node-size-min="3"
   node-size-max="6"
   node-size-scale="linear"
-  node-alpha-key="score"
-  node-alpha-min="0.2"
+  node-alpha-key="value"
+  node-alpha-min="1"
   node-alpha-max="1"
   node-alpha-scale="linear"
   node-color-key="group"
+  edge-width-key="value"
+  edge-width-min="0.1"
+  edge-width-max="5"
+  edge-width-scale="linear"
   tooltips-key="description"
   togostanza-custom_css_url=""
   tooltips-html="true"
